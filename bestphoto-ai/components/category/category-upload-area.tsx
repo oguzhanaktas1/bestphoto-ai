@@ -58,7 +58,7 @@ export function CategoryUploadArea({
   category,
   config,
 }: CategoryUploadAreaProps) {
-  // Main states for file uploads and AI analysis
+  
   const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [isUploading, setIsUploading] = useState(false);
   const [isAnalyzing, setIsAnalyzing] = useState(false);

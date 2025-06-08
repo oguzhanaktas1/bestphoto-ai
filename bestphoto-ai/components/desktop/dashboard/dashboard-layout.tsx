@@ -39,7 +39,7 @@ import { DashboardMainContent } from "@/components/desktop/dashboard/dashboard-m
 import { NavHeader } from "@/components/nav-header";
 import { NavEditPhotos } from "@/components/nav-editphotos";
 
-// This is sample data.
+
 const data = {
   navMain: [
     {

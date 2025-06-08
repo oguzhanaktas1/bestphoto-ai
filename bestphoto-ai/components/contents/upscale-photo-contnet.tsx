@@ -107,7 +107,7 @@ export function UpscalePhotoContent() {
   };
 
   const handleDownload = (image: ProcessedImage) => {
-    // In a real app, you would download the processed image
+    
     const link = document.createElement("a");
     link.href = image.processed;
     link.download = `upscaled-${image.name}`;

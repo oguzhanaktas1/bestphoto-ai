@@ -11,15 +11,15 @@ import { ArrowLeft, Camera, Loader2, Mail } from "lucide-react"
 import Link from "next/link"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { sendPasswordResetEmail } from "firebase/auth"
-import { auth } from "@/lib/firebase" // firebase auth buradan import edilmeli
-import { useRouter } from 'next/navigation' // Import useRouter
+import { auth } from "@/lib/firebase"
+import { useRouter } from 'next/navigation'
 
 export function ForgotPasswordForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
-  const router = useRouter() // Initialize useRouter
+  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

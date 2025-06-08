@@ -12,7 +12,7 @@ function createWindow() {
     },
   })
 
-  // Next.js local dev server'ını aç (örn: http://localhost:3000)
+  
   win.loadURL('http://localhost:3000/desktop')
 }
 

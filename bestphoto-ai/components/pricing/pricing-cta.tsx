@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export function PricingCTA({
   ctaRoutes = {
-    startFree: "/signup",
+    startFree: "/auth/signup",
     comparePlans: "/pricing",
   },
 }: {

@@ -42,7 +42,7 @@ export function SignUpForm({ redirectTo = "/desktop/dashboard" }: SignUpFormProp
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsLoading(true);
-  setError(null); // Clear previous errors
+  setError(null);
 
   try {
     // Kullanıcıyı oluştur
@@ -81,8 +81,7 @@ export function SignUpForm({ redirectTo = "/desktop/dashboard" }: SignUpFormProp
       }
     }, 1000);
 
-    // Yönlendirme işlemi - will be handled by the dialog countdown
-    // router.push("/desktop/dashoard/signin");
+    
   } catch (error: any) {
     // Hata durumları
     if (error.code === "auth/email-already-in-use") {
@@ -154,7 +153,7 @@ export function SignUpForm({ redirectTo = "/desktop/dashboard" }: SignUpFormProp
                       description: "Your account has been created successfully. Enjoy being use BestPhoto AI",
                       variant: "success",
                     })
-                    // Başarılıysa download'a yönlendir
+                    
                     router.push(redirectTo)
                   } catch (error: any) {
                     console.error("Google login error:", error.message)
@@ -162,7 +161,7 @@ export function SignUpForm({ redirectTo = "/desktop/dashboard" }: SignUpFormProp
                       toast({
                         title: "Login cancelled",
                         description: "You cancelled the Google login process. Please try again.",
-                        variant: "destructive", // veya "error" depending on your toast library
+                        variant: "destructive",
                       });
                     } else {
                       toast({

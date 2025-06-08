@@ -42,7 +42,7 @@ export function SignUpForm({ redirectTo = "/download" }: SignUpFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setIsLoading(true);
-  setError(null); // Clear previous errors
+  setError(null);
 
   try {
     // Kullanıcıyı oluştur
@@ -73,17 +73,16 @@ export function SignUpForm({ redirectTo = "/download" }: SignUpFormProps) {
       }
     }, 1000);
 
-    // Kullanıcı profilini güncelle (displayName ve photoURL)
+    
     await updateProfile(user, {
-      displayName: name, // Buraya kullanıcıdan alınan adı yaz
-      photoURL: "https://example.com/avatar.png", // Varsayılan resim ya da dinamik avatar URL
+      displayName: name,
+      photoURL: "https://example.com/avatar.png",
     });
 
-    // Profil güncelleme başarılı, yönlendirme
+    
     console.log("User profile updated");
 
-    // Yönlendirme işlemi - will be handled by the dialog countdown
-    // router.push("/auth/signup"); // Removed old redirection
+    
   } catch (error: any) {
     // Hata durumları
     if (error.code === "auth/email-already-in-use") {
@@ -155,7 +154,7 @@ export function SignUpForm({ redirectTo = "/download" }: SignUpFormProps) {
                       description: "Your account has been created successfully. Enjoy being use BestPhoto AI",
                       variant: "success",
                     })
-                    // Başarılıysa download'a yönlendir
+                    
                     router.push(redirectTo)
                   } catch (error: any) {
                     console.error("Google login error:", error.message)
@@ -163,7 +162,7 @@ export function SignUpForm({ redirectTo = "/download" }: SignUpFormProps) {
                       toast({
                         title: "Login cancelled",
                         description: "You cancelled the Google login process. Please try again.",
-                        variant: "destructive", // veya "error" depending on your toast library
+                        variant: "destructive",
                       });
                     } else {
                       toast({

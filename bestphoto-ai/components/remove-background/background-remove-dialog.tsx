@@ -39,12 +39,12 @@ export function BackgroundRemoveDialog({
       const link = document.createElement("a");
       link.href = url;
 
-      // Correctly parse the URL to get the pathname before extracting filename and ensuring .png extension
+      
       const parsedUrl = new URL(imageUrl);
       const pathnameParts = parsedUrl.pathname.split("/");
       let filename = pathnameParts[pathnameParts.length - 1] || "bg_removed_photo.png";
       
-      // Ensure the filename ends with .png if it doesn't already
+     
       if (!filename.toLowerCase().endsWith(".png")) {
         filename = filename.split('.')[0] + ".png";
       }

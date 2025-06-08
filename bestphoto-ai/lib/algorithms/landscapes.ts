@@ -94,7 +94,7 @@ export async function selectBestLandscapePhoto(
     console.log(`Best landscape photo found: ${bestPhoto.file.name} (ID: ${bestPhoto.id})`);
 
     return {
-      bestPhotoId: bestPhoto.id, // Return the internal ID for frontend use
+      bestPhotoId: bestPhoto.id,
       sortedPhotos: completedFiles,
       reason: data.reason || "Best landscape photo selected by AI.",
     };

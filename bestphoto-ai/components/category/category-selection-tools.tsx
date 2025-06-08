@@ -30,7 +30,7 @@ export function CategorySelectionTools({ category, config }: CategorySelectionTo
     portraits: { faceDetection: true, eyeContact: true, expression: true },
     landscapes: { horizonLevel: true, colorBalance: true, composition: true },
     animals: { eyeSharpness: true, naturalPose: true, motionBlur: false },
-    // Add more category-specific settings as needed
+   
   })
 
   const startAnalysis = () => {
@@ -73,7 +73,7 @@ export function CategorySelectionTools({ category, config }: CategorySelectionTo
         { key: "naturalPose", label: "Natural Pose", description: "Detect natural and engaging animal poses" },
         { key: "motionBlur", label: "Motion Blur Detection", description: "Identify and filter out motion blur" },
       ],
-      // Add more categories as needed
+      
     }
 
     return settingsMap[category as keyof typeof settingsMap] || []

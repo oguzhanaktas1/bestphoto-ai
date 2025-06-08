@@ -12,7 +12,7 @@ interface CategoryPhotoGridProps {
   viewMode: "grid" | "list"
 }
 
-// Sample photos data - in real app this would come from API
+
 const generateSamplePhotos = (category: string) => {
   const basePhotos = [
     {

@@ -10,6 +10,10 @@ import {
   BarChart3,
 } from "lucide-react"
 
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
+import { useAuth } from "@/components/context/AuthContext"
+
 import { NavMain } from "@/components/nav-main"
 import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
@@ -26,7 +30,6 @@ import { NavHeader } from "@/components/nav-header"
 import { NavEditPhotos } from "@/components/nav-editphotos"
 import { RemoveBackgroundContent } from "@/components/contents/remove-background-content"
 
-// Mevcut navigasyon verilerini buraya dahil ediyoruz (veya merkezi bir yerden import edilebilir)
 const data = {
   navMain: [
     {
@@ -68,30 +71,44 @@ const data = {
       name: "Upscale Photo",
       url: "/desktop/dashboard/upscale-photo",
       icon: Camera,
-      isActive: false, // Bu sayfa aktif olmayacak
+      isActive: false,
     },
     {
       name: "Remove Background",
       url: "/desktop/dashboard/remove-background",
       icon: Camera,
-      isActive: true, // Bu sayfa aktif olacak
+      isActive: true,
     },
   ],
 }
 
 export default function RemoveBackgroundPage() {
-  // Navigasyon öğelerinin isActive durumunu güncelleyebiliriz, ancak bu sayfa doğrudan kendi active durumunu ayarlıyor
+  const { user, loading } = useAuth()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push("/desktop/dashboard/signin")
+    }
+  }, [user, loading, router])
+
+  if (loading || !user) {
+    return null
+  }
+
   const updatedNavMain = data.navMain.map((item) => ({
     ...item,
-    isActive: item.url === "/desktop/dashboard", // Dashboard ana sayfasını varsayılan olarak inaktif bırakalım
+    isActive: item.url === "/desktop/dashboard",
   }))
+
   const updatedProjects = data.projects.map((project) => ({
     ...project,
-    isActive: false, // Projeler kategorilerini inaktif bırakalım
+    isActive: false,
   }))
+
   const updatedEditPhotos = data.editPhotos.map((item) => ({
     ...item,
-    isActive: item.name === "Remove Background", // Sadece bu sayfayı aktif yap
+    isActive: item.name === "Remove Background",
   }))
 
   return (

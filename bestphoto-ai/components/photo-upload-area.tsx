@@ -29,7 +29,7 @@ export function PhotoUploadArea({ onUploadComplete, mode, onProcess, isProcessin
 
   const onDrop = useCallback(
     (acceptedFiles: File[]) => {
-      // Only handle the first file since multiple is false
+      
       const file = acceptedFiles[0];
       if (!file) return;
 
@@ -41,10 +41,10 @@ export function PhotoUploadArea({ onUploadComplete, mode, onProcess, isProcessin
         progress: 0,
       };
 
-      setUploadedFiles([newFile]); // Set only the new file, replacing previous ones
+      setUploadedFiles([newFile]);
       setIsUploading(true);
 
-      // Simulate upload progress
+      
       const interval = setInterval(() => {
         setUploadedFiles((prev) =>
           prev.map((f) => {
@@ -66,7 +66,7 @@ export function PhotoUploadArea({ onUploadComplete, mode, onProcess, isProcessin
         clearInterval(interval);
         setIsUploading(false);
 
-        // Call onUploadComplete with the completed file (File object)
+        
         if (onUploadComplete) {
           onUploadComplete({
             id: newFile.id,
@@ -94,7 +94,7 @@ export function PhotoUploadArea({ onUploadComplete, mode, onProcess, isProcessin
   const removeFile = (id: string) => {
     setUploadedFiles((prev) => prev.filter((f) => f.id !== id))
 
-    // Call onUploadComplete with undefined if no files remain
+    
     if (onUploadComplete && uploadedFiles.length === 1 && uploadedFiles[0].id === id) {
       onUploadComplete(undefined)
     }

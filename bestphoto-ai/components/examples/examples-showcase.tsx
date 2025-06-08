@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Check, ChevronLeft, ChevronRight, ThumbsUp } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-// Example data structure
+
 const exampleSets = [
   {
     id: 1,

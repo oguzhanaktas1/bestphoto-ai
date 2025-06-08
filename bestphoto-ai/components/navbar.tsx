@@ -32,9 +32,9 @@ export default function Navbar({
     { label: "Pricing", href: "/pricing" },
     { label: "Download", href: "/download" },
   ],
-  authButtons, // özel buton alanı
+  authButtons,
   showAuthButtons = true,
-  logoHref = "/", // Varsayılan logo yönlendirmesi
+  logoHref = "/",
   signInHref = "/[auth]/signin",
   getStartedHref = "/download",
   onSignInClick,
@@ -42,7 +42,7 @@ export default function Navbar({
 }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
-  const [currentUser, setCurrentUser] = useState<User | null>(null) // State for current user
+  const [currentUser, setCurrentUser] = useState<User | null>(null)
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -205,7 +205,7 @@ export default function Navbar({
                       className="text-white hover:text-cyan-400 justify-center border border-white rounded-tl-xl rounded-br-xl px-4 py-2 min-w-[120px] text-center"
                       asChild
                     >
-                      <Link href="/signin">Sign In</Link>
+                      <Link href="/auth/signin">Sign In</Link>
                     </Button>
                     <Button
                       className="bg-cyan-600 hover:bg-cyan-700 text-white justify-center border border-cyan-400 rounded-tl-xl rounded-br-xl px-4 py-2 min-w-[120px] text-center"

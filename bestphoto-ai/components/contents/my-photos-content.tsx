@@ -64,7 +64,7 @@ export function MyPhotosContent() {
   };
 
   const toggleFavorite = (photoId: string) => {
-    // In a real app, this would update the backend
+    
     console.log(`Toggle favorite for photo ${photoId}`);
   };
 
@@ -87,18 +87,17 @@ export function MyPhotosContent() {
       const result = await response.json();
       console.log("Deletion results:", result);
 
-      // Check if all deletions were successful (optional, depending on desired behavior)
+      
       const failedDeletions = result.results.filter((r: any) => !r.success);
       if (failedDeletions.length > 0) {
-        // Handle partial failure, e.g., show a warning toast
+        
         toast.error(`Failed to delete ${failedDeletions.length} photo(s).`);
       } else {
         toast.success("Selected photos deleted successfully!");
       }
 
-      // Refetch the list of photos and clear selection
-      // Assuming fetchUploads is a function to refresh the list
-      await fetchUploads(); // You need to ensure fetchUploads is defined and accessible
+      
+      await fetchUploads();
       setSelectedPhotos([]);
 
     } catch (error) {

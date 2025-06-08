@@ -72,7 +72,7 @@ export function UpgradePage() {
     setIsProcessing(planId)
 
     if (planId === "free") {
-      // Simulate adding 10 credits to account
+      
       setTimeout(() => {
         setIsProcessing(null)
         // Show success message and redirect
@@ -105,7 +105,7 @@ export function UpgradePage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan) => {
             const isFree = plan.id === "free";
-            const isCurrent = isFree; // You can later set this based on user plan
+            const isCurrent = isFree;
             return (
               <Card
                 key={plan.id}

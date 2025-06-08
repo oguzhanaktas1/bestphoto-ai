@@ -45,7 +45,7 @@ export function SignInForm({ redirectTo = "/desktop/dashboard" }: SignInFormProp
       const user = userCredential.user
 
       if (!user.emailVerified) {
-        await auth.signOut(); // Sign out the unverified user
+        await auth.signOut();
         setError("Your email has not been verified. Please check your inbox for a verification link.");
         return;
       }
@@ -140,7 +140,7 @@ export function SignInForm({ redirectTo = "/desktop/dashboard" }: SignInFormProp
                     description: "Welcome, Enjoy being use BestPhoto AI",
                     variant: "success",
                   })
-                  // Başarılıysa download'a yönlendir
+                  
                   router.push(redirectTo)
                 } catch (error: any) {
                   console.error("Google login error:", error.message)

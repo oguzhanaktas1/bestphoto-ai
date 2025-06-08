@@ -194,7 +194,7 @@ export function ProfileContent() {
   const handleTakePhoto = async () => {
     setShowAvatarOptions(false)
 
-    // --- Actual camera access and photo capture logic (requires UI elements like <video> and <canvas>) ---
+    
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
       toast.error("Camera access not supported in this browser.")
       console.error("Camera access not supported")
@@ -207,25 +207,7 @@ export function ProfileContent() {
       // Request access to the user's camera
       const stream = await navigator.mediaDevices.getUserMedia({ video: true })
 
-      // --- Next Steps (Implement in your UI) ---
-      // 1. Display the stream in a <video> element.
-      //    const videoElement = document.querySelector('#camera-preview') // You need to add this video element
-      //    if (videoElement instanceof HTMLVideoElement) { videoElement.srcObject = stream; }
-      // 2. Add a button to trigger photo capture.
-      // 3. On button click, draw the current video frame onto a <canvas> element.
-      //    const canvas = document.createElement('canvas') // Or get a canvas element from your UI
-      //    canvas.width = videoElement.videoWidth;
-      //    canvas.height = videoElement.videoHeight;
-      //    const context = canvas.getContext('2d');
-      //    if (context) { context.drawImage(videoElement, 0, 0, canvas.width, canvas.height); }
-      // 4. Convert the canvas content to a Blob or Data URL.
-      //    canvas.toBlob(async (photoBlob) => { /* ... upload logic ... */ }, 'image/png');
-      //    OR const dataUrl = canvas.toDataURL('image/png'); // Then convert Data URL to Blob for upload
-
-      // --- For demonstration, we'll simulate getting a Blob and uploading ---
-      // In a real flow, the photoBlob would come from the canvas.
-
-      // Simulate creating a dummy blob (replace with actual blob from canvas)
+      
       const dummyBlob = new Blob(['dummy image data'], { type: 'image/png' })
       const photoBlob = dummyBlob
 
@@ -237,9 +219,9 @@ export function ProfileContent() {
           return
       }
 
-      // Upload the captured photo Blob
+      
       const formData = new FormData()
-      // Use a meaningful filename, e.g., based on timestamp or user ID
+      
       formData.append('file', photoBlob, `avatar_${Date.now()}.png`)
 
       const response = await fetch('/api/upload', {
@@ -252,21 +234,21 @@ export function ProfileContent() {
       }
 
       const result = await response.json()
-      const uploadedImageUrl = result.url // Assuming your API returns the URL
+      const uploadedImageUrl = result.url 
 
-      // Update Firebase Auth profile with the new photo URL
+      
       if (auth.currentUser) {
         await updateProfile(auth.currentUser, {
           photoURL: uploadedImageUrl,
         })
-        // Update local state
+        
         setProfile(prev => ({ ...prev, avatarUrl: uploadedImageUrl }))
         toast.success("Profile picture updated!")
       } else {
         toast.error("User not logged in.")
       }
 
-      // Stop the camera stream after successful capture and upload
+      
       stream.getTracks().forEach(track => track.stop())
 
     } catch (error: any) {
@@ -279,16 +261,16 @@ export function ProfileContent() {
        else {
         toast.error(`Failed to update profile picture: ${error.message || 'Unknown error'}`)
       }
-       // Ensure stream is stopped if an error occurs before stopping it explicitly
-       if (error.message && error.message.includes('stream')) { // Simple check if stream was likely created
+       
+       if (error.message && error.message.includes('stream')) { 
            try { const stream = await navigator.mediaDevices.getUserMedia({ video: true }); stream.getTracks().forEach(track => track.stop()); } catch (e) { console.error("Failed to stop stream after error", e) }
        }
     }
-    // --- End of Camera Access and Capture Logic ---
+    
   }
 
   const handleUploadPhoto = () => {
-    // Trigger the hidden file input
+    
     fileInputRef.current?.click()
     setShowAvatarOptions(false)
   }
@@ -327,12 +309,12 @@ export function ProfileContent() {
       console.error("Upload or profile update failed:", error)
       toast.error("Failed to update profile picture.")
     } finally {
-      event.target.value = '' // Reset file input
+      event.target.value = ''
     }
   }
 
   const handleManageSessionsClick = () => {
-    // Implement the logic to manage sessions
+    
     console.log("Manage sessions clicked")
   }
 
