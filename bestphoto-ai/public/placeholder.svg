@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="150" viewBox="0 0 200 150" fill="none">
+  <rect width="200" height="150" fill="#e0e0e0"></rect>
+  <line x1="0" y1="0" x2="200" y2="150" stroke="#b0b0b0" stroke-width="2"></line>
+  <line x1="0" y1="150" x2="200" y2="0" stroke="#b0b0b0" stroke-width="2"></line>
+  <text x="100" y="80" fill="#888" font-size="18" font-family="Arial, sans-serif" text-anchor="middle" alignment-baseline="middle">
+    Görsel Yok
+  </text>
+</svg>

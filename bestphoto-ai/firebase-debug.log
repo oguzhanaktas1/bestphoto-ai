@@ -1,0 +1,229 @@
+[debug] [2025-05-01T09:51:41.321Z] ----------------------------------------------------------------------
+[debug] [2025-05-01T09:51:41.323Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oguzz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-05-01T09:51:41.323Z] CLI Version:   14.2.0
+[debug] [2025-05-01T09:51:41.323Z] Platform:      win32
+[debug] [2025-05-01T09:51:41.323Z] Node Version:  v22.14.0
+[debug] [2025-05-01T09:51:41.324Z] Time:          Thu May 01 2025 12:51:41 GMT+0300 (GMT+03:00)
+[debug] [2025-05-01T09:51:41.324Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-01T09:51:41.327Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-05-01T09:51:41.518Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-01T09:51:41.519Z] > authorizing via signed-in user (oguzhan.emre4@gmail.com)
+[debug] [2025-05-01T09:51:41.519Z] [iam] checking project best-photo-ai for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-01T09:51:41.519Z] Checked if tokens are valid: false, expires at: 1745266301314
+[debug] [2025-05-01T09:51:41.519Z] Checked if tokens are valid: false, expires at: 1745266301314
+[debug] [2025-05-01T09:51:41.520Z] > refreshing access token with scopes: []
+[debug] [2025-05-01T09:51:41.520Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-05-01T09:51:41.520Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-01T09:51:41.803Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-05-01T09:51:41.803Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-05-01T09:51:41.813Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions [none]
+[debug] [2025-05-01T09:51:41.813Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions x-goog-quota-user=projects/best-photo-ai
+[debug] [2025-05-01T09:51:41.813Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-01T09:51:41.933Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-05-01T09:51:41.933Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-05-01T09:51:42.787Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions 200
+[debug] [2025-05-01T09:51:42.787Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-01T09:51:42.788Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:42.788Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:42.788Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai [none]
+[debug] [2025-05-01T09:51:43.266Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai 200
+[debug] [2025-05-01T09:51:43.266Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai {"projectId":"best-photo-ai","projectNumber":"1044562520796","displayName":"best-photo-ai","name":"projects/best-photo-ai","resources":{"hostingSite":"best-photo-ai"},"state":"ACTIVE","etag":"1_51f76c9a-6664-4e6c-b877-197b7f83c065"}
+[debug] [2025-05-01T09:51:45.929Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:45.929Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:45.929Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites pageToken=&pageSize=10
+[debug] [2025-05-01T09:51:47.267Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites 200
+[debug] [2025-05-01T09:51:47.267Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites {"sites":[{"name":"projects/best-photo-ai/sites/best-photo-ai","defaultUrl":"https://best-photo-ai.web.app","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","type":"DEFAULT_SITE"}]}
+[debug] [2025-05-01T09:51:47.267Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:47.267Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:47.268Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config [none]
+[debug] [2025-05-01T09:51:48.119Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config 200
+[debug] [2025-05-01T09:51:48.119Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config {"projectId":"best-photo-ai","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","storageBucket":"best-photo-ai.firebasestorage.app","apiKey":"AIzaSyBTg8bovt5GE8EcQYmVb6n9DUB-WeNwqvg","authDomain":"best-photo-ai.firebaseapp.com","messagingSenderId":"1044562520796","measurementId":"G-30D9RH6ZXW"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-05-01T09:51:52.303Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:52.304Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:51:52.304Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai [none]
+[debug] [2025-05-01T09:51:53.436Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai 200
+[debug] [2025-05-01T09:51:53.436Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai {"name":"projects/best-photo-ai/sites/best-photo-ai","defaultUrl":"https://best-photo-ai.web.app","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.2.4
+
+[info]    - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Skipping validation of types
+
+[info]    Skipping linting
+
+[info]    Collecting page data ...
+
+[info] unhandledRejection [Error [PageNotFoundError]: Cannot find module for page: /_document] {
+  type: 'PageNotFoundError',
+  code: 'ENOENT'
+}
+
+[debug] [2025-05-01T09:52:10.476Z] Error: ENOENT: no such file or directory, open 'C:\Users\oguzz\Desktop\nextjs-react\BestPhoto-AI-Project\bestphoto-ai\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-01T09:56:43.205Z] ----------------------------------------------------------------------
+[debug] [2025-05-01T09:56:43.208Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oguzz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-05-01T09:56:43.208Z] CLI Version:   14.2.0
+[debug] [2025-05-01T09:56:43.208Z] Platform:      win32
+[debug] [2025-05-01T09:56:43.208Z] Node Version:  v22.14.0
+[debug] [2025-05-01T09:56:43.208Z] Time:          Thu May 01 2025 12:56:43 GMT+0300 (GMT+03:00)
+[debug] [2025-05-01T09:56:43.209Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-01T09:56:43.365Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-01T09:56:43.365Z] > authorizing via signed-in user (oguzhan.emre4@gmail.com)
+[debug] [2025-05-01T09:56:43.365Z] [iam] checking project best-photo-ai for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-01T09:56:43.366Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:43.366Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:43.367Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions [none]
+[debug] [2025-05-01T09:56:43.367Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions x-goog-quota-user=projects/best-photo-ai
+[debug] [2025-05-01T09:56:43.367Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-01T09:56:44.378Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions 200
+[debug] [2025-05-01T09:56:44.379Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-01T09:56:44.379Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:44.379Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:44.379Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai [none]
+[debug] [2025-05-01T09:56:44.866Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai 200
+[debug] [2025-05-01T09:56:44.866Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai {"projectId":"best-photo-ai","projectNumber":"1044562520796","displayName":"best-photo-ai","name":"projects/best-photo-ai","resources":{"hostingSite":"best-photo-ai"},"state":"ACTIVE","etag":"1_51f76c9a-6664-4e6c-b877-197b7f83c065"}
+[debug] [2025-05-01T09:56:46.704Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:46.704Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:46.704Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites pageToken=&pageSize=10
+[debug] [2025-05-01T09:56:48.089Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites 200
+[debug] [2025-05-01T09:56:48.089Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites {"sites":[{"name":"projects/best-photo-ai/sites/best-photo-ai","defaultUrl":"https://best-photo-ai.web.app","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","type":"DEFAULT_SITE"}]}
+[debug] [2025-05-01T09:56:48.089Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:48.089Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:48.089Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config [none]
+[debug] [2025-05-01T09:56:48.808Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config 200
+[debug] [2025-05-01T09:56:48.808Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config {"projectId":"best-photo-ai","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","storageBucket":"best-photo-ai.firebasestorage.app","apiKey":"AIzaSyBTg8bovt5GE8EcQYmVb6n9DUB-WeNwqvg","authDomain":"best-photo-ai.firebaseapp.com","messagingSenderId":"1044562520796","measurementId":"G-30D9RH6ZXW"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-05-01T09:56:52.860Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:52.860Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:56:52.860Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai [none]
+[debug] [2025-05-01T09:56:53.115Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai 200
+[debug] [2025-05-01T09:56:53.115Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai {"name":"projects/best-photo-ai/sites/best-photo-ai","defaultUrl":"https://best-photo-ai.web.app","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.2.4
+
+[info]    - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Skipping validation of types
+
+[info]    Skipping linting
+
+[info]    Collecting page data ...
+
+[info] unhandledRejection [Error [PageNotFoundError]: Cannot find module for page: /_document] {
+  type: 'PageNotFoundError',
+  code: 'ENOENT'
+}
+
+[debug] [2025-05-01T09:57:03.392Z] Error: ENOENT: no such file or directory, open 'C:\Users\oguzz\Desktop\nextjs-react\BestPhoto-AI-Project\bestphoto-ai\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-01T09:57:59.139Z] ----------------------------------------------------------------------
+[debug] [2025-05-01T09:57:59.141Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\oguzz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-05-01T09:57:59.142Z] CLI Version:   14.2.2
+[debug] [2025-05-01T09:57:59.142Z] Platform:      win32
+[debug] [2025-05-01T09:57:59.142Z] Node Version:  v22.14.0
+[debug] [2025-05-01T09:57:59.142Z] Time:          Thu May 01 2025 12:57:59 GMT+0300 (GMT+03:00)
+[debug] [2025-05-01T09:57:59.142Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-01T09:57:59.298Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-01T09:57:59.298Z] > authorizing via signed-in user (oguzhan.emre4@gmail.com)
+[debug] [2025-05-01T09:57:59.299Z] [iam] checking project best-photo-ai for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-05-01T09:57:59.300Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:57:59.300Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:57:59.300Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions [none]
+[debug] [2025-05-01T09:57:59.301Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions x-goog-quota-user=projects/best-photo-ai
+[debug] [2025-05-01T09:57:59.301Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-01T09:58:00.487Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions 200
+[debug] [2025-05-01T09:58:00.487Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/best-photo-ai:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-05-01T09:58:00.487Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:00.487Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:00.488Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai [none]
+[debug] [2025-05-01T09:58:01.306Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai 200
+[debug] [2025-05-01T09:58:01.306Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/best-photo-ai {"projectId":"best-photo-ai","projectNumber":"1044562520796","displayName":"best-photo-ai","name":"projects/best-photo-ai","resources":{"hostingSite":"best-photo-ai"},"state":"ACTIVE","etag":"1_51f76c9a-6664-4e6c-b877-197b7f83c065"}
+[debug] [2025-05-01T09:58:03.194Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:03.194Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:03.195Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites pageToken=&pageSize=10
+[debug] [2025-05-01T09:58:04.528Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites 200
+[debug] [2025-05-01T09:58:04.528Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites {"sites":[{"name":"projects/best-photo-ai/sites/best-photo-ai","defaultUrl":"https://best-photo-ai.web.app","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","type":"DEFAULT_SITE"}]}
+[debug] [2025-05-01T09:58:04.529Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:04.529Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:04.529Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config [none]
+[debug] [2025-05-01T09:58:05.219Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config 200
+[debug] [2025-05-01T09:58:05.219Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1044562520796:web:967884b4ad7ca4e02a6219/config {"projectId":"best-photo-ai","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","storageBucket":"best-photo-ai.firebasestorage.app","apiKey":"AIzaSyBTg8bovt5GE8EcQYmVb6n9DUB-WeNwqvg","authDomain":"best-photo-ai.firebaseapp.com","messagingSenderId":"1044562520796","measurementId":"G-30D9RH6ZXW"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-05-01T09:58:09.390Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:09.390Z] Checked if tokens are valid: true, expires at: 1746096700804
+[debug] [2025-05-01T09:58:09.390Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai [none]
+[debug] [2025-05-01T09:58:09.694Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai 200
+[debug] [2025-05-01T09:58:09.694Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/best-photo-ai/sites/best-photo-ai {"name":"projects/best-photo-ai/sites/best-photo-ai","defaultUrl":"https://best-photo-ai.web.app","appId":"1:1044562520796:web:967884b4ad7ca4e02a6219","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.2.4
+
+[info]    - Environments: .env.local
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Skipping validation of types
+
+[info]    Skipping linting
+
+[info]    Collecting page data ...
+
+[info] [Error [PageNotFoundError]: Cannot find module for page: /download] {
+  code: 'ENOENT'
+}
+
+[info] 
+
+[info] > Build error occurred
+
+[info] [Error: Failed to collect page data for /download] { type: 'Error' }
+
+[debug] [2025-05-01T09:58:19.854Z] Error: ENOENT: no such file or directory, open 'C:\Users\oguzz\Desktop\nextjs-react\BestPhoto-AI-Project\bestphoto-ai\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
